@@ -15,6 +15,11 @@
     --bgcolor:#fff;
     --logo_color:#37bcc8;
     --navcolor:#102a42;
+    --service_section_color:#f1f5f8;
+    --textcolor:#324d67;
+    --transition: all 0.3s linear;
+    --bodywidth: 73.70%;
+    --padding: 80px 0;
 }
 
 ul {

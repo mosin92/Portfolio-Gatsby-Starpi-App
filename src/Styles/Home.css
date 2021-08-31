@@ -8,22 +8,22 @@
 .home_left_section{
   
     width: 60%;
-    z-index: 1;
+    z-index: 2;
     background-color: var(--main-color);
 
 }
 .home_right_section{
   
-    z-index: 2;
+    z-index: 1;
 }
 .home_info{
-
+   
     height: 100%;
     width: 78%;
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    /* align-items: center; */
+  z-index: 2;
     justify-content: center;
 }
 
@@ -80,10 +80,32 @@
     .home_hero_image{
         display: flex;
         align-items: center;
-        border-radius: 50%;
+        width: 80%;
         height: 100%;
-        /* position: relative;
-        right: 50%; */
         /* border: 1px solid black; */
         justify-content: center;
+        position: relative;
+        z-index: 1;
+        right: 10%;
+    }
+
+    .home_body{
+       
+        width: 73.70%;
+        margin: auto;
+    }
+
+    .service_section{
+       
+        /* height: 80vh; */
+        background-color: var(--service_section_color);
+    }
+
+  
+
+    /* Feature Project Styling */
+
+    .feature_project_section{
+        
+        background-color: #f1f5f8;
     }

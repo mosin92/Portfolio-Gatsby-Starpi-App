@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Styles/Home.css'
 import { socialIcons } from '../Constant/SocialLinks'
-import myimg from '../Images/test.png'
+import myimg from '../Images/img3.png'
 function Home_Hero_Section() {
     return (
         <div className="home_wrapper">
@@ -11,7 +11,7 @@ function Home_Hero_Section() {
                         <h1><span className="info_bar">I'm</span> Mohsin</h1>
                     </div>
                     <div>
-                        <p>Freelance Full stack Developer</p>
+                        <p>Full stack React Developer</p>
                     </div>
                    <div>
                        <button>CONTACT ME</button>
@@ -40,7 +40,7 @@ function Home_Hero_Section() {
                 <div className="home_hero_image">
                    
                    <div>
-                       <img src={myimg} width="500px" height="500px" alt="pic" />
+                       <img src={myimg} width="600px" height="600px" alt="pic" />
                    </div>
                         
                 </div>
