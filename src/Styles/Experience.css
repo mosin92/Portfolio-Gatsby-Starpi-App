@@ -1,6 +1,5 @@
 
 .experience_wrapper{
-    /* border: 1px solid black; */
     width: var(--bodywidth);
     margin: auto;
     padding: var(--padding);
@@ -20,7 +19,7 @@
 
 .experience_bar{
     height: 5px;
-    width: 9%;
+    width: 100px;
     /* margin-top: 15px; */
     margin: auto;
     background-color: #2caeba;
@@ -29,21 +28,23 @@
 .exp_detail_container{
     display: flex;
     margin-top: 50px;
+    justify-content: space-between;
 }
 .exp_right{
-    /* border: 1px solid black; */
-    flex-grow: 1;
+    width: 100%;
 }
 
-.jobName{
+
+.company_info{
     background-color: #dae2ec;
-   width: 10%;
-   color: #617d98;
-   font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: var(--spacing);
-    margin: 15px 0;
-    border-radius: 3px;
+    width: 14%;
+    text-align: center;
+    color: #617d98;
+    font-weight: 700;
+     text-transform: capitalize;
+     letter-spacing: var(--spacing);
+     margin: 15px 0;
+     border-radius: 3px;
 }
 .date{
     color:#324d67;
@@ -59,13 +60,34 @@
     
 }
 .exp_left{
-    width: 200px;
-    /* border: 1px solid black; */
+    width:20%;
     letter-spacing: var(--spacing);
     font-size: larger;
     cursor: pointer;
+   
     }
+.exp_btn{
+    border: none;
+    outline: none;
+    background-color: white;
+    /* color: var(--logo_color); */
+    font-family: var(--header-font);
+    text-transform: capitalize;
+    font-size: large;
+   font-weight: 400;
+    letter-spacing: var(--spacing);
+}
 
+.active_btn  {
+     border-left: 2px solid var(--logo_color);
+  }
+
+.active_btn button{
+     color: var(--logo_color);
+}
+.exp_btn {
+    text-transform: uppercase;
+}
 .company{
     margin-bottom: 35px;
     
@@ -98,7 +120,6 @@ font-size: 1.2rem;
 }
 
 .company_info{
-    /* border: 1px solid black; */
     text-transform:uppercase;
     padding: 3px 15px;
 }
@@ -123,4 +144,69 @@ font-size: 1.2rem;
     letter-spacing: var(--spacing);
     font-weight: 700;
     cursor: pointer;
+}
+
+
+@media(max-width:1190px){
+    .exp_left{
+        width: 30%;
+    }
+    .company_info{
+        width: 120px;
+    }
+}
+
+@media(max-width:930px){
+    .experience_wrapper{
+        width: 90%;
+    }
+    .exp_detail_container{
+        flex-direction: column;
+    }
+    .exp_left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .active_btn  {
+    
+        border-left: none;
+         border-bottom: 2px solid var(--logo_color); 
+      
+    }
+    .company{
+        
+        padding: 15px 0;
+        margin-right: 20px;
+    }
+
+    .company:hover{
+        border-left: none;
+        border-bottom:2px solid var(--logo_color) ;
+    }
+    
+    .moreinfo_btn button
+    {
+        margin-right: 0;
+    }
+    .experience_wrapper h1{
+        font-size: 2.0rem;
+    }
+    .exp_right h2{
+        font-size: large;
+    }
+    .job_detail{
+        font-size: 1.0rem;
+    }
+    .date{
+        font-size: 1.0rem;
+    }
+    .company button{
+        font-size: medium;
+        
+
+    }
+    .exp_left{
+        font-size: medium;
+    }
 }

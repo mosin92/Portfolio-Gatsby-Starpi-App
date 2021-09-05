@@ -1,5 +1,36 @@
 
 .footer-main{
-    margin-top:30px;
-    border: 1px solid black;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    height: 150px;
+}
+.footer_icon{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    
+}
+.icon_item{
+    margin-right: 15px;
+}
+.icon_item a{
+    color: white;
+}
+.footer_caption{
+    font-family: var(--header-font);
+    font-size: large;
+    letter-spacing: var(--spacing);
+    margin-top: 15px;
+}
+.site_name{
+    color: var(--logo_color);
+}
+
+@media(max-width:930px){
+    .footer-main{
+        height: 100%;
+        padding-bottom: 20px;
+    }
 }

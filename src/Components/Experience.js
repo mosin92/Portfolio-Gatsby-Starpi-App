@@ -1,7 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Styles/Experience.css'
 import { FaAngleDoubleRight } from "react-icons/fa"
+import { StaticQuery, graphql, useStaticQuery } from "gatsby"
+const query = graphql`
+  {
+    allStrapiJobs(sort: {fields: strapiId, order: DESC}) {
+      nodes {
+        company
+        position
+        date
+        job_detail {
+          job_desc
+        }
+        strapiId
+      }
+    }
+  }
+`
 function Experience() {
+    const data=useStaticQuery(query)
+        // console.log("*******Data ******",data)
+        const{allStrapiJobs:{nodes:job}}=data
+        console.log("*************Job*********",job)
+        const[value,setvalue]=useState(0)
+        const {company,position,date,job_detail}=job[value]
+
+        console.log("Job_Details",company ,position ,date, job_detail)
     return (
         <div className="experience_wrapper">
             <div>
@@ -13,64 +37,54 @@ function Experience() {
             <div className="exp_detail_container">
                 {/* Left Section */}
                 <div className="exp_left">
-                    <div className="company">
-                        Tommy
+                    {
+                        job.map((item,index)=>(
+                    <div  className={`company ${index===value && "active_btn"}` }  key={index}>
+                        <button
+                        className="exp_btn"
+                        onClick={()=>setvalue(index)}
+                        >
+                            {
+                                item.company
+                            }
+                        </button>
+                       
+
                     </div>
-                    <div className="company">
-                    Big Dro
-                    </div>
+                        ))
+                    }
+                    
+                    
                         
                 </div>
 
                 {/* Rigth section */}
 
                 <div className="exp_right">
-                       <h2>Full Stack Web Developer</h2>
+                    
+                       <h2>{position}</h2>
                        <div className="jobName">
-                          <p className="company_info">Tommy</p> 
+                          <p className="company_info">{company}</p> 
                        </div>
                        <div className="date">
-                           <p>December 2015 - Present</p>
+                           <p>{date}</p>
                        </div>
                        
-                       <div className="job_detail">
-                           <div className="jobicons">
-                           <FaAngleDoubleRight />
-                           </div>
-                           <div>
-                               <p> Tote bag sartorial mlkshk air plant 
-                               vinyl banjo lumbersexual poke leggings offal cold-pressed brunch neutra. Hammock photo booth live-edge disrupt</p>
-                           </div>
-                          
-                          
-                       </div>
-                       {/* Next Entry */}
-                       <div className="job_detail">
-                           <div className="jobicons">
-                           <FaAngleDoubleRight />
-                           </div>
-                           <div>
-                               <p> Tote bag sartorial mlkshk air plant 
-                               vinyl banjo lumbersexual poke leggings offal cold-pressed brunch neutra. Hammock photo booth live-edge disrupt</p>
-                           </div>
-                          
-                          
-                       </div>
                        
-                        {/* Next Entry */}
-                        <div className="job_detail">
-                           <div className="jobicons">
-                           <FaAngleDoubleRight />
-                           </div>
-                           <div>
-                               <p> Tote bag sartorial mlkshk air plant 
-                               vinyl banjo lumbersexual poke leggings offal cold-pressed brunch neutra. Hammock photo booth live-edge disrupt</p>
-                           </div>
-                          
-                          
-                       </div>
-                       
-                       {/* End */}
+                           {
+                               job_detail.map((job,index)=>(
+                                <div className="job_detail" key={index}>
+                                       <div className="jobicons">
+                                     <FaAngleDoubleRight />
+                                     </div>
+                                         <div>
+                                          <p> {job.job_desc}</p>
+                                         </div>
+                                  
+                                         </div>
+                               ))
+                           }
+                         
                        {/* End */}
                        <div className="moreinfo_btn">
                            <button>More Info</button>

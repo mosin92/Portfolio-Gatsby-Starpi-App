@@ -3,17 +3,14 @@ import '../Styles/Header.css'
 import { navdata } from '../Constant/Link'
 import {Link} from 'gatsby'
 import { FaAlignRight  } from "react-icons/fa"
-function Header() {
+function Header2() {
     return (
         <div className="navbar_wrapper">
             {/* Logo Section */}
-            <div className="logo">
+            <div className="logo_content">
                 <div className="logo_container">
-
                     <h1>Web<span className="logo_color">Dev</span></h1>
-                    
-                   
-                </div>
+                 </div>
                 
             </div>
                     {/* Nav Link Section */}
@@ -41,4 +38,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header2

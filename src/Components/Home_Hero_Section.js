@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Styles/Home.css'
 import { socialIcons } from '../Constant/SocialLinks'
-import myimg from '../Images/img3.png'
+import myimg from '../Images/img3edit.png'
 function Home_Hero_Section() {
     return (
         <div className="home_wrapper">

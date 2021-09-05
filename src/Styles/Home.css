@@ -2,19 +2,20 @@
 .home_wrapper{
    
     display: flex;
-    height: 90vh;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.87);
 }
 .home_left_section{
   
-    width: 60%;
-    z-index: 2;
+    width: 62%;
+    z-index: 1;
     background-color: var(--main-color);
+    
 
 }
 .home_right_section{
-  
-    z-index: 1;
+    z-index: 2;
+    width: 40%;
 }
 .home_info{
    
@@ -23,7 +24,6 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-  z-index: 2;
     justify-content: center;
 }
 
@@ -82,11 +82,11 @@
         align-items: center;
         width: 80%;
         height: 100%;
-        /* border: 1px solid black; */
+        background-color: transparent;
         justify-content: center;
         position: relative;
-        z-index: 1;
-        right: 10%;
+        /* z-index: 1; */
+        right: 12%;
     }
 
     .home_body{
@@ -109,3 +109,56 @@
         
         background-color: #f1f5f8;
     }
+
+    @media(max-width:930px){
+        .home_wrapper{
+          height: 100%;
+        }
+        .home_left_section ,.home_right_section{
+            z-index: 0;
+        }
+        .info_title h1{
+            font-size: 2.5rem;
+        }
+        .home_hero_image img{
+         width: 500px;
+         height: 500px;
+        }
+        
+        .home_right_section{
+            /* height: 100%; */
+            height: 400px;
+        }
+        .home_body{
+            width: 90%;
+        }
+    }
+
+    @media(max-width:900px){
+
+        .home_wrapper{
+            flex-direction: column;
+            /* justify-content: center; */
+        }
+        .home_left_section , .home_right_section{
+            width: 100%;
+            background-color: var(--main-color);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .home_left_section{
+            height: 300px;
+        }
+        .home_hero_image{
+            right: 0;
+            width: 100%;
+        }
+        .home_hero_image img{
+            width: 100%;
+            object-fit: contain;
+        }
+
+    }
+
+    
