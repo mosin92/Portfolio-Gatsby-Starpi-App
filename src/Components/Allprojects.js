@@ -62,7 +62,7 @@ function Allprojects() {
                     <h4>{title}</h4>
                     <div className="project_text">
                         <p>
-                           {description}</p>
+                           {description}Butcher drinking vinegar franzen authentic messenger bag copper mug food truck taxidermy. Mumblecore lomo echo park readymade iPhone migas single-origin coffee franzen cloud bread tilde vegan flexitarian.</p>
                     </div>
                     {/* Tag Section Ends */}
                     <div className="project_tag">
@@ -108,7 +108,7 @@ function Allprojects() {
                 <p>0{index +1 }</p>
                 <h4>{title}</h4>
                 <div className="project_text">
-                    <p>{description}</p>
+                    <p>{description}Butcher drinking vinegar franzen authentic messenger bag copper mug food truck taxidermy. Mumblecore lomo echo park readymade iPhone migas single-origin coffee franzen cloud bread tilde vegan flexitarian.</p>
                 </div>
                 {/* Tag Section Ends */}
                 <div className="project_tag">

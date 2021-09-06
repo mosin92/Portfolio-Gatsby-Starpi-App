@@ -3,7 +3,7 @@ import '../Styles/Featureproject.css'
 import officeimg from '../Images/office.jpg'
 import { FaGithubSquare, FaShareSquare  } from "react-icons/fa"
 import { GatsbyImage,getImage } from "gatsby-plugin-image"
-import {  graphql, useStaticQuery, } from "gatsby"
+import {  graphql, Link, useStaticQuery, } from "gatsby"
 const query = graphql`
   {
     allStrapiProjects(
@@ -83,7 +83,7 @@ function FeatureProject() {
                     <h4>{title}</h4>
                     <div className="project_text">
                         <p>
-                           {description}</p>
+                           {description}Butcher drinking vinegar franzen authentic messenger bag copper mug food truck taxidermy. Mumblecore lomo echo park readymade iPhone migas single-origin coffee franzen cloud bread tilde vegan flexitarian.</p>
                     </div>
                     {/* Tag Section Ends */}
                     <div className="project_tag">
@@ -129,7 +129,7 @@ function FeatureProject() {
                 <p>0{index +1 }</p>
                 <h4>{title}</h4>
                 <div className="project_text">
-                    <p>{description}</p>
+                    <p>{description} Butcher drinking vinegar franzen authentic messenger bag copper mug food truck taxidermy. Mumblecore lomo echo park readymade iPhone migas single-origin coffee franzen cloud bread tilde vegan flexitarian.</p>
                 </div>
                 {/* Tag Section Ends */}
                 <div className="project_tag">
@@ -186,7 +186,7 @@ function FeatureProject() {
                         
                     
                  <div className="projects_btn">
-                     <button>Projects</button>
+                     <button> Projects </button>
                  </div>
                 
 
