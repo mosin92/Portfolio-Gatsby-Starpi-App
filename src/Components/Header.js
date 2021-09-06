@@ -3,7 +3,7 @@ import '../Styles/Header.css'
 import { navdata } from '../Constant/Link'
 import {Link} from 'gatsby'
 import { FaAlignRight  } from "react-icons/fa"
-function Header() {
+function Header({myfun}) {
     return (
         <div className="navbar_wrapper">
             {/* Logo Section */}
@@ -32,7 +32,7 @@ function Header() {
                             ))
                         }
                     </ul>
-                    <FaAlignRight className="nav_icon" />
+                    <FaAlignRight className="nav_icon" onClick={()=>myfun(true)} />
                 </div>
                  
             </div>
