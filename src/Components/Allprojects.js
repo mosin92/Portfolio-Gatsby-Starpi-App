@@ -161,11 +161,7 @@ function Allprojects() {
                 
                })
            }
-                        
-                    
-                 <div className="projects_btn">
-                     <button>Projects</button>
-                 </div>
+                     
                 
 
             
