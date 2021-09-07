@@ -12,7 +12,7 @@ module.exports = {
   {
     resolve: `gatsby-source-strapi`,
     options: {
-      apiURL:  process.env.URL,
+      apiURL:  process.env.MyUrl,
       queryLimit: 1000, // Defaults to 100
       collectionTypes: [`jobs`,`projects`],
     },
