@@ -40,7 +40,7 @@
     width: 58%;
     position:absolute;
     font-size: larger;
-    font-family: var(--header-font);
+    /* font-family: var(--header-font); */
     word-spacing: 0.5rem;
     /* top: 25%; */
     border-radius: 3px;
@@ -94,6 +94,7 @@
     color: var(--navcolor);
     text-transform: uppercase;
     letter-spacing: var(--spacing);
+    font-family: var(--header-font);
 }
 
 .project_card > p , .project_card_two > p{
@@ -121,7 +122,7 @@
     left: 15%;
     background-color: white;
     font-size: larger;
-    font-family: var(--header-font);
+    /* font-family: var(--header-font); */
     word-spacing: 0.5rem;
 }
 
