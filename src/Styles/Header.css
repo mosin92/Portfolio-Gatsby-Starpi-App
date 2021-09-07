@@ -77,10 +77,13 @@
      .logo_container{
          width: 100%;
          
+         
      }
+     
      .logo{
          background-color: white;
          width: 50%;
+        
      }
      
      .logo_content{
@@ -100,7 +103,8 @@
  }
      
  .logo{
-     width: 100%;
+     
+     flex-grow: 1;
  }
  .logo_content{
      width: 100%;
