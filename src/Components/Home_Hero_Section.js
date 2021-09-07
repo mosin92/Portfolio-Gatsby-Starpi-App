@@ -1,7 +1,8 @@
 import React from 'react'
 import '../Styles/Home.css'
 import { socialIcons } from '../Constant/SocialLinks'
-import myimg from '../Images/img3edit.png'
+import myimg from "../Images/aboutpic.png"
+import {StaticImage} from 'gatsby-plugin-image'
 function Home_Hero_Section() {
     return (
         <div className="home_wrapper">
@@ -39,9 +40,10 @@ function Home_Hero_Section() {
                 
                 <div className="home_hero_image">
                    
-                   <div>
-                       <img src={myimg} width="600px" height="600px" alt="pic" />
-                   </div>
+                  
+                       <img src={myimg} width="500px" height="500px" alt="pic" />
+                       {/* <StaticImage src="../Images/aboutpic.png" placeholder="blurred"  /> */}
+                  
                         
                 </div>
             </div>

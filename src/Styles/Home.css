@@ -63,6 +63,7 @@
        
         .social_icons{
             border-radius: 5px;
+            
         }
         .hero_icons ul li{
             display: inline-block;
@@ -83,9 +84,14 @@
         height: 100%;
         background-color: transparent;
         justify-content: center;
-        position: relative;
+        /* position: relative; */
         /* z-index: 1; */
-        right: 12%;
+        
+    }
+
+    .home_hero_image img {
+        position: relative;
+        right: 20%;
     }
 
     .home_body{
@@ -109,6 +115,11 @@
         background-color: #f1f5f8;
     }
 
+    @media(max-width:1008px){
+        .home_hero_image img{
+            right: 10%;
+        }
+    }
     @media(max-width:930px){
         .home_wrapper{
           height: 100%;
@@ -121,14 +132,14 @@
         .info_title h1{
             font-size: 2.5rem;
         }
-        .home_hero_image img{
-         width: 500px;
-         height: 500px;
-        }
+        /* .home_hero_image img{
+         width: 100%;
+         height: 100%;
+        } */
         
         .home_right_section{
-            /* height: 100%; */
-            height: 400px;
+            height: 100%;
+            /* height: 320px; */
         }
         .home_body{
             width: 90%;
@@ -136,11 +147,8 @@
         .home_info{
             width: 100%;
             align-items: center;
+            height: 250px;
         }
-    }
-
-    @media(max-width:900px){
-
         .home_wrapper{
             flex-direction: column;
             /* justify-content: center; */
@@ -153,17 +161,24 @@
             justify-content: center;
         }
         .home_left_section{
-            height: 300px;
+            height: 250px;
         }
         .home_hero_image{
             right: 0;
             width: 100%;
         }
         .home_hero_image img{
-            width: 100%;
-            object-fit: contain;
+            width: 50%;
+            height: 100%;
+            /* object-fit: contain; */
+            right: 0;
         }
-
     }
 
-    
+    @media(max-width:700px){
+        .home_hero_image img{
+            width: 70%;
+            height: 100%;
+            
+        }
+    }

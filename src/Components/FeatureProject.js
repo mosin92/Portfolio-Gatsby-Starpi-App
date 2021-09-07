@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Styles/Featureproject.css'
-import officeimg from '../Images/office.jpg'
 import { FaGithubSquare, FaShareSquare  } from "react-icons/fa"
 import { GatsbyImage,getImage } from "gatsby-plugin-image"
 import {  graphql, Link, useStaticQuery, } from "gatsby"
@@ -32,28 +31,7 @@ const query = graphql`
 function FeatureProject() {
     const projectdata=useStaticQuery(query)
     const {allStrapiProjects:{nodes:myproject}}=projectdata
-    console.log("***********Project Data************",myproject)
-    const data=[{
-        id:1,
-        text:"I'm baby salvia lomo yuccie, vinyl seitan XOXO tousled bicycle rights slow-carb occupy taiyaki microdosing brunch. Photo booth slow-carb health goth kickstarter cardigan. Roof party pour-over swag pork belly glossier DIY farm-to-table godard locavore.Chicharrones gastropub slow-carb food truck tumblr semiotics, heirloom ugh wolf unicorn thundercats health goth.",
-        url:officeimg,
-    },
-    {
-        id:2,
-        text:"I'm baby salvia lomo yuccie, vinyl seitan XOXO tousled bicycle rights slow-carb occupy taiyaki microdosing brunch. Photo booth slow-carb health goth kickstarter cardigan. Roof party pour-over swag pork belly glossier DIY farm-to-table godard locavore.Chicharrones gastropub slow-carb food truck tumblr semiotics, heirloom ugh wolf unicorn thundercats health goth.",
-        url:officeimg,
-    },
-    {
-        id:3,
-        text:"I'm baby salvia lomo yuccie, vinyl seitan XOXO tousled bicycle rights slow-carb occupy taiyaki microdosing brunch. Photo booth slow-carb health goth kickstarter cardigan. Roof party pour-over swag pork belly glossier DIY farm-to-table godard locavore.Chicharrones gastropub slow-carb food truck tumblr semiotics, heirloom ugh wolf unicorn thundercats health goth.",
-        url:officeimg,
-    },
-]
-//    useEffect(
-//        ()=>{
-//        setcheck(!check)
-//        } ,[check]
-//    )
+    
     return (
         <div className="project_wrapper">
             <h1>Featured Projects</h1>
@@ -72,10 +50,8 @@ function FeatureProject() {
                 if(num%2==1){
                     return( <section className="project_container">
                             <div className="project_img">
-                                {/* <div className="img_overlay"></div> */}
                                 <GatsbyImage image={pathtoImage} />
-                                {/* <StaticImage src="../Images/office.jpg" placeholder="blurred" layout="constrained" /> */}
-                    {/* <img src={officeimg} /> */}
+                                
                 </div>
 
                 <div className="project_card">
@@ -186,7 +162,7 @@ function FeatureProject() {
                         
                     
                  <div className="projects_btn">
-                     <button> Projects </button>
+                     <button><Link to="/project">Projects </Link>  </button>
                  </div>
                 
 

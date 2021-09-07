@@ -148,8 +148,7 @@ function Allprojects() {
             <div className="project_img_two">
             <div className="img_overlay_2"></div>
             <GatsbyImage image={pathtoImage} />
-            {/* { ? <img src={officeimg} /> : */}
-            {/* <StaticImage src="../Images/office.jpg" placeholder="blurred" layout="constrained" /> */}
+           
              
             
                  

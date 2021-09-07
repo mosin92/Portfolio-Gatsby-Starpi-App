@@ -21,7 +21,6 @@ function Experience() {
     const data=useStaticQuery(query)
         // console.log("*******Data ******",data)
         const{allStrapiJobs:{nodes:job}}=data
-        console.log("*************Job*********",job)
         const[value,setvalue]=useState(0)
         const {company,position,date,job_detail}=job[value]
 
